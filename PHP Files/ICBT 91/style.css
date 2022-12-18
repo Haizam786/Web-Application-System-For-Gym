@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+/*selector to select all the elements on the page*/
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+section
+{
+    position: absolute;
+    right: 0;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background:#111;
+    transition: 0.5s;
+}
+.banner.active
+{
+    right: 300px;
+}
+/*rathnayaka GYMS Logo layout*/
+header
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+header .logo
+{
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+/*layout of toggle button*/
+.toggle_button
+{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background: url(Images/menu.png);
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: center;
+    cursor: pointer;
+}
+.toggle_button.active
+{
+    background: url(Images/close.png);
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: center;
+    cursor: pointer;
+}
+/*layout for background video of home page*/
+ section video
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.overplay
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+    background-blend-mode: multiply,multiply;
+    mix-blend-mode: overlay;
+}
+.text
+{
+    position: relative;
+    z-index: 10;
+}
+.text h2
+{
+    font-size: 4em;
+    font-weight: 800;
+    color:#f38400;
+    line-height: 1em;
+    text-transform: uppercase;
+
+    width: 100%;
+    text-align: right;
+    animation: left_to_right 1s ease;
+}
+/*applying animation*/
+ @keyframes left_to_right {
+    from {
+      margin-left: -100%;
+    }
+    to {
+      margin-left: 0;
+    } 
+ }
+.text h3
+{
+    font-size: 3.5em;
+    font-weight: 700;
+    color:#f38400;
+    line-height: 1em;
+    text-transform: uppercase;
+    width: 100%;
+    text-align: right;
+    animation: left_to_right 1s ease;
+}
+@keyframes left_to_right {
+    from {
+      margin-left: -100%;
+    }
+    to {
+      margin-left: 0;
+    }  
+ }
+ /*Navigation menu layout*/
+.menu
+{   
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+}
+.menu ul
+{
+    position: relative;
+}  
+.menu ul li
+{
+    position: relative;
+    list-style: none;
+    text-align: center;
+}
+.menu ul li a
+{
+    text-decoration: none;
+    font-size: 21px;
+    color: #111;
+    
+}
+@media(max-width:991px)
+{
+    section,
+    section header
+    {
+        padding: 40px;
+    }
+    .text h2
+    {
+        font-size: 4em;
+    }
+    .text h3
+    {
+        font-size: 4em;
+    }
+}
+
+/*Alignments for images of col-1 class*/
+.col-1{
+    float: left;
+    width: 30%;
+    padding: 10px;
+    justify-content: center;
+    text-align: center;
+    color: #eee;
+  }
+  
+  .col-1 :hover
+  {
+      box-shadow: 1px 3px 9px 0 rgb(230, 227, 227);
+  }
+  
+  
+  /*Responsive layout - makes the 2 columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 500px) {
+    .column {
+      width: 100%;
+    }
+  }
+  
+
+  /* Package prices page CSS*/
+  .columns {
+    float: left;
+    width: 22%;
+    padding: 8px;
+  }
+  
+  .price {
+    list-style-type: none;
+    border: 1px solid #eee;
+    margin: 0;
+    padding: 0;
+    transition: 0.3s;
+  }
+  
+  .price:hover {
+    box-shadow: 0 8px 12px 0 rgb(230, 227, 227)
+  }
+  
+  .price .header {
+    background-color: #111;
+    color: white;
+    font-size: 25px;
+  }
+  
+  .price li {
+    border-bottom: 1px solid #eee;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .price .grey {
+    background-color: #eee;
+    font-size: 20px;
+  }
+  .price .yellow
+  {
+    background-color: #f3ef00;
+    font-size: 20px;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .columns {
+      width: 100%;
+    }
+  }
+  /*Contact Us Catogory*/
+.cont
+{
+    text-align: center;
+    justify-content: center;
+    width: 100%; 
+}
+ul.loc
+{
+    list-style-type: upper-roman;
+    font-size: 25px;
+    color: #eee;
+    text-align: center;
+    
+}
+
+#container {
+  display: flex;
+  justify-content:flex-end; 
+}
+
